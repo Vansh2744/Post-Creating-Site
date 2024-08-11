@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  color: azure;
+  margin-bottom: 3rem;
+}
+.logout {
+  padding: 0.5rem;
+  height: 2rem;
+  width: 6rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  background-color: cadetblue;
+  border: none;
+}
+a {
+  text-decoration: none;
+  color: azure;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+#text {
+  width: 15rem;
+  height: 3rem;
+  outline: none;
+  text-align: center;
+  background-color: rgb(187, 185, 185);
+}
+.create {
+  height: 2rem;
+  width: 6rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  background-color: cadetblue;
+  border: none;
+}
+.container {
+  width: 20rem;
+  background-color: gray;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.username {
+  color: rgb(5, 5, 207);
+}
+button:hover {
+  cursor: pointer;
+}
+.likes {
+  display: flex;
+  gap: 1rem;
+}
+.container p {
+  color: rgb(114, 21, 201);
+}
+.profile {
+  font-size: 30px;
+  display: flex;
+  gap: 1rem;
+}
+.us {
+  font-size: 20px;
+  color: cadetblue;
+}
+img {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}

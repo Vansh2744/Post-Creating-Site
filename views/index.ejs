@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post Page</title>
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="profile">
+        <a href="/profile">
+        <img
+          src="/images/<%= user.profilepic %>"
+          width="60px"
+          height="60px"
+          alt="" />
+          </a>
+        <div>
+          <p class="name"><%= user.name %></p>
+          <p class="us"><%= user.username %></p>
+        </div>
+      </div>
+      <h1>Create Post</h1>
+      <button class="logout"><a href="/logout">logout</a></button>
+    </div>
+
+    <form action="/create" method="POST" class="input">
+      <div>
+        <textarea name="text" placeholder="Enter Post..." id="text"></textarea>
+      </div>
+      <button type="submit" class="create">create</button>
+    </form>
+
+    <% user.posts.reverse().forEach((post)=>{ %>
+    <div class="container">
+      <div class="username"><%= user.username %></div>
+      <div class="post"><%= post.content %></div>
+      <p><%= post.like.length %> likes</p>
+      <div class="likes">
+        <a href="/like?id=<%=post._id%>"
+          ><%= post.like.indexOf(user._id)?"👍🏻":"👎🏻"%></a
+        >
+        <a href="/edit?id=<%=post._id%>">edit</a>
+        <a href="/delete?id=<%=post._id%>">delete</a>
+      </div>
+    </div>
+    <% }) %>
+  </body>
+</html>
